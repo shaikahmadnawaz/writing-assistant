@@ -1,12 +1,12 @@
 "use client";
 import ReactWrapBalancer from "react-wrap-balancer";
 import Link from "next/link";
-import Github from "@/components/GitHub";
+import Github from "@/components/Github";
 
 export default function Home() {
   return (
     <main className="relative max-w-6xl min-h-screen px-4 mx-auto sm:px-6">
-      <div className="pt-32 pb-16 md:pt-52 md:pb-32">
+      <div className="py-16 md:py-32">
         <div className="container mx-auto text-center">
           <div className="mb-6">
             <div className="relative inline-flex before:absolute before:inset-0 ">
