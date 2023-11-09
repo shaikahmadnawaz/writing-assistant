@@ -2,6 +2,7 @@
 import ReactWrapBalancer from "react-wrap-balancer";
 import Link from "next/link";
 import Github from "@/components/Github";
+import VibeDropdown from "@/components/VibeDropdown";
 
 export default function Home() {
   return (
@@ -43,6 +44,56 @@ export default function Home() {
               Star on GitHub
             </Link>
           </div>
+          <form className="max-w-xl w-full">
+            <div className="flex mt-10 items-center space-x-3">
+              <p className="text-left font-medium">
+                1. Input your writing{" "}
+                <span className="text-slate-500">
+                  (or write a few sentences to enhance your text)
+                </span>
+                .
+              </p>
+            </div>
+            
+            <textarea
+              // value={input}
+              // onChange={handleInputChange}
+              rows={4}
+              className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
+              placeholder={
+                "e.g. Enhance your text with AI! 🚀 Describe your writing or input existing content. Writing about tech, creativity, and more."
+              }
+            />
+            
+            <div className="flex mb-5 items-center space-x-3">
+              
+              <p className="text-left font-medium">2. Select your vibe.</p>
+            </div>
+            <div className="block">
+              <VibeDropdown/>
+              {/* <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} /> */}
+            </div>
+            {/* {!isLoading && (
+              <button
+                className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
+                type="submit"
+              >
+                Generate your bio &rarr;
+              </button>
+            )}
+            {isLoading && (
+              <button
+                className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
+                disabled
+              >
+                <span className="loading">
+                  <span style={{ backgroundColor: "white" }} />
+                  <span style={{ backgroundColor: "white" }} />
+                  <span style={{ backgroundColor: "white" }} />
+                </span>
+              </button>
+            )} */}
+          </form>
         </div>
       </div>
     </main>
